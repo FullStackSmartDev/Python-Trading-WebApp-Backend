@@ -1,0 +1,47 @@
+category: CUSTOM
+dials: []
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Short Interest
+    slug: short_interest
+    type: AMOUNT
+  - name: Days to Cover Short
+    slug: days_to_cover_short
+    type: NUMBER
+  - name: Percent of Float Short
+    slug: float_short
+    type: PERCENT
+  - name: Insider Ownership Percent
+    slug: insider_ownership
+    type: PERCENT
+  - name: Institutional Investers Ownership Percent
+    slug: institutional_investors_ownership_percent
+    type: PERCENT
+  - name: 30 Day Average Daily Volume
+    slug: average_daily_volume_30d
+    type: AMOUNT
+  - name: Price
+    slug: price
+    type: NUMBER
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+filterable: []
+id: 15
+name: Time Series-Short Interest, Insider %, Institutional %
+notes: ""
+slug: short-interest
+sortable: []
+special_sorts: []
+precedented_attrs: []

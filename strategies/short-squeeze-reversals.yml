@@ -1,0 +1,76 @@
+category: CUSTOM
+dials:
+  - market_cap
+  - float_short
+  - days_to_cover_short
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Insider Ownership Percentage
+    slug: insider_ownership
+    type: PERCENT
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Percent of Float Short
+    slug: float_short
+    type: PERCENT
+  - name: Cash from Operations (Quarterly)
+    slug: cash_from_operations
+    type: PERCENT
+  - name: 20 Day SMA
+    slug: sma_20d
+    type: NUMBER
+  - name: 50 Day SMA
+    slug: sma_50d
+    type: NUMBER
+  - name: Days to cover short
+    slug: days_to_cover_short
+    type: NUMBER
+  - name: Short Interest
+    slug: short_interest
+    type: AMOUNT_MILLIONS
+  - name: Percent of shares outstanding short
+    slug: percent_shares_outstanding
+    type: PERCENT
+  - name: Institutional Investors Ownership Percent
+    slug: institutional_investors_ownership_percent
+    type: PERCENT
+  - name: 30 Day Average Daily Volume
+    slug: avg_daily_vol_30d
+    type: COUNT_MILLIONS
+  - name: Shares Outstanding
+    slug: shares_outstanding
+    type: COUNT_MILLIONS
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: GARP
+    slug: score_1
+    type: NUMBER
+  - name: Relative Value
+    slug: score_2
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 6
+name: Short Squeeze Reversals
+notes: ""
+slug: short-squeeze-reversals
+sortable: []
+special_sorts:
+  - score_1
+  - score_2
+precedented_attrs:
+  - score_1
+  - score_2

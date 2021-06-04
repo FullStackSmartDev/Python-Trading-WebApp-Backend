@@ -1,0 +1,194 @@
+category: GENERAL
+dials:
+  - fundamental_score
+  - value_score
+  - momentum_score
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: Description
+    slug: description
+    type: STRING
+  - name: URL
+    slug: url
+    type: URL
+  - name: Investor Relations URL
+    slug: investor_relations_url
+    type: URL
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Revenue (TTM)
+    slug: revenue
+    type: AMOUNT_MILLIONS
+  - name: Shares Outstanding
+    slug: shares_outstanding
+    type: COUNT_MILLIONS
+  - name: Percent of Float Short
+    slug: float_short
+    type: PERCENT
+  - name: Days to Cover
+    slug: days_to_cover_short
+    type: DAYS
+  - name: Insider Ownership Percentage
+    slug: insider_ownership
+    type: PERCENT
+  - name: Gross Profit Margin
+    slug: gross_profit_margin
+    type: PERCENT
+  - name: Operating Margin (TTM)
+    slug: operating_margin
+    type: PERCENT
+  - name: Profit Margin
+    slug: profit_margin
+    type: PERCENT
+  - name: Scale Factor
+    slug: owners_cash_profits_margin
+    type: PERCENT
+  - name: Debt to Equity Ratio
+    slug: debt_to_equity_ratio
+    type: NUMBER
+  - name: Rev Growth Yr/Yr
+    slug: revenue_annual_yoy
+    type: PERCENT
+  - name: Rev Growth Q-Yr/Yr
+    slug: revenue_quarterly_yoy
+    type: PERCENT
+  - name: PE Ratio
+    slug: pe_ratio
+    type: NUMBER
+  - name: Price to Tangible Book Value
+    slug: price_to_tangible_book_value
+    type: NUMBER
+  - name: EV to EBITDA
+    slug: ev_to_ebitda
+    type: NUMBER
+  - name: Price to CFO Per Share (TTM)
+    slug: price_to_cfo_per_share
+    type: NUMBER
+  - name: Dividend Yield
+    slug: dividend_yield
+    type: PERCENT
+  - name: Return on Equity
+    slug: return_on_equity
+    type: PERCENT
+  - name: Return on Invested Capital
+    slug: return_on_invested_capital
+    type: PERCENT
+  - name: Cash Return on Capital Invested (CROCI) (TTM)
+    slug: cash_return_on_capital_invested
+    type: PERCENT
+  - name: Earnings Yield
+    slug: earnings_yield
+    type: PERCENT
+  - name: Buyback Yield
+    slug: net_common_buyback_yield
+    type: PERCENT
+  - name: Cash and Equivalents (Per Share)
+    slug: cash_and_equivalents
+    type: AMOUNT
+  - name: Cash (% Assets)
+    slug: cash
+    type: PERCENT
+  - name: R&D%
+    slug: research_and_development_expense
+    type: PERCENT
+  - name: Cash from Operations (% of Quarterly Revenues)
+    slug: cash_from_operations
+    type: PERCENT
+  - name: Total Dividend Paid (TTM)
+    slug: total_dividend_paid_ttm
+    type: AMOUNT_MILLIONS
+  - name: Total Dividend Paid (Quarterly)
+    slug: total_dividend_paid_quarterly
+    type: AMOUNT_MILLIONS
+  - name: Book Value (Quarterly)
+    slug: book_value_quarterly
+    type: AMOUNT_MILLIONS
+  - name: Net Income (TTM)
+    slug: net_income
+    type: AMOUNT_MILLIONS
+  - name: Cash from Operations(TTM)
+    slug: cash_from_operations_ttm
+    type: AMOUNT_MILLIONS
+  - name: Exchange Name
+    slug: exchange_name
+    type: STRING
+  - name: IPO Date
+    slug: ipo_date
+    type: DATE
+  - name: Normalized Earnings Yield
+    slug: normalized_earnings_yield
+    type: PERCENT
+  - name: Cash (% Assets)
+    slug: cash_and_equivalents_quarterly_assets
+    type: PERCENT
+  - name: Years Since IPO
+    slug: years_since_ipo
+    type: NUMBER
+  - name: Current Ratio
+    slug: current_ratio
+    type: NUMBER
+  - name: Fundamental Score
+    slug: fundamental_score
+    type: NUMBER
+  - name: Next Earnings Release
+    slug: next_earnings_release
+    type: DATE
+  - name: Value Score
+    slug: value_score
+    type: NUMBER
+  - name: Momentum Score
+    slug: momentum_score
+    type: NUMBER
+  # patched up from yahoo finance
+  - name: Float
+    slug: float_shares
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+  - max: 0
+    min: 0
+    slug: valuation
+    type: range
+  - options:
+      - Real Estate
+      - Consumer Cyclical
+      - Industrials
+      - Financial Services
+      - Technology
+      - Healthcare
+      - Energy
+    slug: sector
+    type: multiple_choice
+  - max: 0
+    min: 0
+    slug: size
+    type: range
+id: 0
+name: All Stocks
+notes: ""
+slug: all-stocks
+sortable:
+  - market_cap
+  - value
+  - quality
+  - growth
+  - dividend_yield
+  - float_short
+  - days_to_cover_short
+special_sorts: []
+precedented_attrs: []

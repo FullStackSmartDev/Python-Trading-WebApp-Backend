@@ -1,0 +1,86 @@
+category: CUSTOM
+dials:
+  - market_cap
+  - research_and_development_expense
+  - operating_margin
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Revenue (Annual YoY Growth)
+    slug: revenue_annual_yoy
+    type: PERCENT
+  - name: Shares Outstanding
+    slug: shares_outstanding
+    type: COUNT_MILLIONS
+  - name: Valuation Percentage
+    slug: valuation
+    type: PERCENT
+  - name: PS Ratio
+    slug: ps_ratio
+    type: NUMBER
+  - name: Gross Profit Margin
+    slug: gross_profit_margin
+    type: PERCENT
+  - name: Operating Margin (TTM)
+    slug: operating_margin
+    type: PERCENT
+  - name: Next Earnings Release
+    slug: next_earnings_release
+    type: DATE
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: URL
+    slug: url
+    type: URL
+  - name: Cash Return on Capital Invested (CROCI) (TTM)
+    slug: cash_return_on_capital_invested
+    type: PERCENT
+  - name: Operating Revenue (Quarterly YoY Growth)
+    slug: operating_revenue_quarterly_yoy
+    type: PERCENT
+  - name: Return on Equity
+    slug: return_on_equity
+    type: PERCENT
+  - name: Research and Development Expense (Quarterly YoY Growth)
+    slug: research_and_development_expense
+    type: PERCENT
+  - name: R&D to Revenue (TTM)
+    slug: rnd_to_revenue
+    type: PERCENT
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Return on Invested Capital
+    slug: return_on_invested_capital
+    type: PERCENT
+  - name: GARP
+    slug: score_1
+    type: NUMBER
+  - name: Relative Value
+    slug: score_2
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 7
+name: R&D
+notes: ""
+slug: rnd
+sortable:
+  - research_and_development_expense
+special_sorts:
+  - score_1
+  - score_2
+precedented_attrs:
+  - score_1
+  - score_2

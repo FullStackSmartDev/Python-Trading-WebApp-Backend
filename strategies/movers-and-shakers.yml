@@ -1,0 +1,51 @@
+category: CUSTOM
+dials:
+  - market_cap
+  - revenue_quarterly_yoy
+  - shares_outstanding
+encoded:
+  - name: Index
+    slug: index
+    type: STRING
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Company
+    slug: company
+    type: STRING
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: Country
+    slug: country
+    type: STRING
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: P/E
+    slug: pe
+    type: NUMBER
+  - name: Price
+    slug: price
+    type: NUMBER
+  - name: Change
+    slug: change
+    type: STRING
+  - name: Volume
+    slug: volume
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 8
+name: Movers and Shakers
+notes: ""
+slug: movers-and-shakers
+sortable: []
+special_sorts: []
+precedented_attrs: []

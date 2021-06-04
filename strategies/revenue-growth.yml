@@ -1,0 +1,66 @@
+category: GROWTH_AND_QUALITY
+dials:
+  - market_cap
+  - revenue_annual_yoy
+  - revenue_quarterly_yoy
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Revenue (Annual YoY Growth)
+    slug: revenue_annual_yoy
+    type: PERCENT
+  - name: Revenue (Quarterly YoY Growth)
+    slug: revenue_quarterly_yoy
+    type: PERCENT
+  - name: Operating Revenue (Quarterly YoY Growth)
+    slug: operating_revenue_quarterly_yoy
+    type: PERCENT
+  - name: PS Ratio
+    slug: ps_ratio
+    type: NUMBER
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: URL
+    slug: url
+    type: URL
+  - name: Operating Revenue (QoQ Growth)
+    slug: operating_revenue_qoq
+    type: PERCENT
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Operating Revenue (Annual YoY Growth)
+    slug: operating_revenue_annual_yoy
+    type: PERCENT
+  - name: GARP
+    slug: score_1
+    type: NUMBER
+  - name: Relative Value
+    slug: score_2
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 4
+name: Revenue Growth
+notes: ""
+slug: revenue-growth
+sortable:
+  - revenue_annual_yoy
+  - revenue_quarterly_yoy
+special_sorts:
+  - score_1
+  - score_2
+precedented_attrs:
+  - score_1
+  - score_2

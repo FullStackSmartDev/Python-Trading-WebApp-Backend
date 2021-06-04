@@ -1,0 +1,55 @@
+category: CUSTOM
+dials:
+  - market_cap
+  - float_short
+  - days_to_cover_short
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Insider Ownership Percentage
+    slug: insider_ownership
+    type: PERCENT
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Percent of Float Short
+    slug: float_short
+    type: PERCENT
+  - name: Cash from Operations (Quarterly)
+    slug: cash_from_operations
+    type: AMOUNT_MILLIONS
+  - name: 20 Day SMA
+    slug: sma_20d
+    type: NUMBER
+  - name: 50 Day SMA
+    slug: sma_50d
+    type: NUMBER
+  - name: Price
+    slug: price
+    type: NUMBER
+  - name: GARP
+    slug: score_1
+    type: NUMBER
+  - name: Relative Value
+    slug: score_2
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 5
+name: Short Squeeze Leaders
+notes: ""
+slug: short-squeeze-leaders
+sortable: []
+special_sorts:
+  - score_1
+  - score_2
+precedented_attrs:
+  - score_1
+  - score_2

@@ -1,0 +1,77 @@
+category: VALUE
+dials:
+  - market_cap
+  - insider_ownership
+  - price_to_tangible_book_value
+encoded:
+  - name: Symbol
+    slug: symbol
+    type: STRING
+  - name: Name
+    slug: name
+    type: STRING
+  - name: Owners' Cash Profits Margin (TTM)
+    slug: owners_cash_profits_margin
+    type: PERCENT
+  - name: Operating Revenue (Quarterly YoY Growth)
+    slug: operating_revenue_quarterly_yoy
+    type: PERCENT
+  - name: Cash Return on Capital Invested (CROCI) (TTM)
+    slug: cash_return_on_capital_invested
+    type: PERCENT
+  - name: Earnings Yield
+    slug: earnings_yield
+    type: PERCENT
+  - name: Free Cash Flow Yield
+    slug: free_cash_flow_yield
+    type: PERCENT
+  - name: PS Ratio
+    slug: ps_ratio
+    type: NUMBER
+  - name: Market Cap
+    slug: market_cap
+    type: AMOUNT_MILLIONS
+  - name: Sector
+    slug: sector
+    type: STRING
+  - name: Industry
+    slug: industry
+    type: STRING
+  - name: URL
+    slug: url
+    type: URL
+  - name: Years Since IPO
+    slug: years_since_ipo
+    type: NUMBER
+  - name: Insider Ownership Percentage
+    slug: insider_ownership
+    type: PERCENT
+  - name: Existing Institutional Investors Buying
+    slug: existing_institutional_investors_buying
+    type: NUMBER
+  - name: Insiders Who Bought Shares
+    slug: insiders_who_bought_shares
+    type: NUMBER
+  - name: GARP
+    slug: score_1
+    type: NUMBER
+  - name: Relative Value
+    slug: score_2
+    type: NUMBER
+filterable:
+  - max: 100
+    min: 0
+    slug: market_cap
+    type: range
+id: 12
+name: Insider Ownership
+notes: ""
+slug: insider-ownership
+sortable:
+  - insider_ownership
+special_sorts:
+  - score_1
+  - score_2
+precedented_attrs:
+  - score_1
+  - score_2

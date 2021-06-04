@@ -1,0 +1,84 @@
+# This file is a template, and might need editing before it works on your project.
+
+default:
+  image: python
+
+stages:
+  - static_analysis
+  - tests
+  - docker_build
+  - deploy
+
+black:
+  stage: static_analysis
+  script:
+    - pip install black
+    - black -v --check .
+
+pyflakes:
+  stage: static_analysis
+  script:
+    - pip install pyflakes
+    - pyflakes .
+
+#isort:
+#  stage: static_analysis
+#  script:
+#    - pip install isort
+#    - isort --check-only **/*.py
+
+pytest:
+  variables:
+    INFLUX_HOST: influxdb
+  stage: tests
+  services:
+    - influxdb:latest
+  script:
+    - pip install poetry
+    - poetry install
+    - poetry run pytest
+  except:
+    - master
+
+docker-build-master:
+  # Official docker image.
+  image: docker:stable
+  stage: docker_build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
+    - docker push "$CI_REGISTRY_IMAGE"
+  only:
+    - master
+
+docker-build:
+  # Official docker image.
+  image: docker:stable
+  stage: docker_build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+  except:
+    - master
+
+deploy:
+  stage: deploy
+  before_script:
+    - apt-get update -qq
+    # Setup SSH deploy keys
+    - "which ssh-agent || ( apt-get install -qq openssh-client )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - ssh deployer@155.138.208.177 "cd /home/meet/devops && ./deploy_yahoo_finance_server.sh && exit"
+  only:
+    - master
